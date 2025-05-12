@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --cores-0:  #f4e100;
+    --cores-10:  #e6dfd8;
+    --cores-20:  #de5d25;
+    --cores-30:  #1FB3AC;
+    --cores-40:  #1B3F91;
+    --cores-50:  #8E3F90;
+    --cores-60:  #DE261A;
+}
+
+
+* {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+}
+    
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/fundocomu.jpg);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3; 
+    z-index: -1;  
+}
+
+
+
+
+
+
+
+    #rodape {
+        background-color: #222; 
+        color: #fff;
+        padding: 30px 20px;
+        text-align: center;
+        font-family: Arial, sans-serif;
+    }
+    
+    
+    .rodape-lista {
+        list-style: none;
+        padding: 5px 0;
+        margin: 0;
+        font-size: 14px;
+    }
+    
+    .rodape-lista li {
+        margin-bottom: 5px;
+    }
+    
+    
+    #rodape_redessociais {
+        margin-top: 20px;
+    }
+    
+    .rodape-link {
+        color: #fff;
+        margin: 0 10px;
+        font-size: 18px;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+    
+    #instagram:hover {
+        color: var(--cores-50);
+    }
+    
+    #facebook:hover {
+        color: var(--cores-40);
+    }
+    
+    #rodape_copyright {
+        margin-top: 25px;
+        font-size: 12px;
+        color: #aaa;
+    }
+

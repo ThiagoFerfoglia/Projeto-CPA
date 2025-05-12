@@ -1,0 +1,10 @@
+.container {
+    width: 500px; 
+  }
+
+  .div_contato {
+    width: 500px; 
+    height: 290px;
+    background-color: #90e0ee;
+    margin: 20px auto; 
+  }

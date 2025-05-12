@@ -1,0 +1,95 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+main {
+    flex: 1;
+    padding: 30px;
+}
+
+
+.apresentacao {
+    font-family: "Cabin", sans-serif;
+    width: 80%;
+    max-width: 1000px;
+    height: auto;
+    padding: 24px;
+    border: 2px solid #1FB3AC; 
+    border-radius: 10px;
+    font-size: 20px;
+    resize: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    display: block;
+    margin: 30px auto;
+    text-align: justify;
+    background-color: rgba(255, 255, 255, 0.85);
+    color: #333; 
+}
+
+
+.Atividades_Desenvolvidas {
+    font-family: "Montserrat", sans-serif;
+    text-align: left;
+    padding: 3rem;
+    font-size: 18px;
+    max-width: 900px;
+    margin: 30px auto;
+    background-color: #f4f4f4; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #444;
+}
+
+.Atividades_Desenvolvidas b {
+    font-weight: bold;
+    font-size: 20px;
+    color: #DE261A; 
+}
+
+
+.CPA_fotos {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.CPA_fotos:hover {
+    transform: scale(1.05); /* Efeito suave ao passar o mouse */
+}
+
+/* Responsividade: Alinhando as imagens e textos para telas menores */
+@media (max-width: 768px) {
+    .Atividades_Desenvolvidas {
+        padding: 2rem;
+        font-size: 16px;
+    }
+
+    .div_foto1, .div_foto2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .CPA_fotos {
+        width: 80%;
+        margin: 10px auto; /* Alinhamento central para as imagens */
+    }
+}
+
+
+a {
+    color: #1FB3AC;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #DE261A;
+    text-decoration: underline;
+}
