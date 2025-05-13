@@ -1,88 +1,183 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cabin:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Condensed+One&family=Special+Gothic+Expanded+One&display=swap');
 
+/* ===========================
+   Variáveis de Cores
+=========================== */
 :root {
-    --cores-0:  #f4e100;
-    --cores-10:  #e6dfd8;
-    --cores-20:  #de5d25;
-    --cores-30:  #1FB3AC;
-    --cores-40:  #1B3F91;
-    --cores-50:  #8E3F90;
-    --cores-60:  #DE261A;
+    --color-1: #F4E100;
+    --color-2: #E6DFD8;
+    --color-3: #DE5D25;
+    --color-4: #1FB3AC;
+    --color-5: #1B3F91;
+    --color-6: #8E3F90;
+    --color-7: #DE261A;
+    --color-8: #171717;
+    --color-9: #f5f5f5;
 }
 
-
-* {
-    font-family: "Montserrat", sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    letter-spacing: 1px;
-}
-    
+/* ===========================
+   Fundo fixo com opacidade
+=========================== */
 body::before {
     content: "";
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     background-image: url(../assets/fundocomu.jpg);
     background-size: cover;
     background-position: center;
-    opacity: 0.3; 
-    z-index: -1;  
+    opacity: 0.3;
+    z-index: -1;
+}
+
+/* ===========================
+   Cabeçalho
+=========================== */
+#cabeçalho {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white; /* importante para cobrir o conteúdo atrás */
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header #cabeçalho .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header #cabeçalho .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    font-weight: bold;
+    color: black;
+}
+
+.botão-contato button {
+    background-color: #1A347F;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: none;
+    align-items: center;
 }
 
 
+header.rolagem a {
+    color: var(--color-5); 
+}
 
 
+/* ===========================
+   Banner
+=========================== */
+.banner {
+    height: 100vh;
+    background-image: url(/img/bodysite.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* ===========================
+   Botão de Contato
+=========================== */
+.botão-contato button {
+    width: 120px;
+    height: 40px;
+    border: 0;
+    background-color: var(--color-5);
+    color: var(--color-9);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+/* ===========================
+   Rodapé
+=========================== */
+#rodape {
+    background-color: #222;
+    color: #fff;
+    padding: 30px 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.rodape-lista {
+    list-style: none;
+    padding: 5px 0;
+    margin: 0;
+    font-size: 14px;
+}
+
+.rodape-lista li {
+    margin-bottom: 5px;
+}
+
+#rodape_redessociais {
+    margin-top: 20px;
+}
+
+.rodape-link {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 18px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#instagram:hover {
+    color: var(--color-6); 
+}
+
+#facebook:hover {
+    color: var(--color-5); 
+}
+
+#rodape_copyright {
+    margin-top: 25px;
+    font-size: 12px;
+    color: #aaa;
+}
+
+#carouselExample {
+  max-height: 650px; 
+  overflow: hidden;
+}
+
+#carouselExample .carousel-item img {
+  height: 650px;
+  object-fit: cover;
+}
 
 
+@media (max-width: 768px) {
+  #carouselExample .carousel-item img {
+    height: 400px;
+  }
+}
 
-    #rodape {
-        background-color: #222; 
-        color: #fff;
-        padding: 30px 20px;
-        text-align: center;
-        font-family: Arial, sans-serif;
-    }
-    
-    
-    .rodape-lista {
-        list-style: none;
-        padding: 5px 0;
-        margin: 0;
-        font-size: 14px;
-    }
-    
-    .rodape-lista li {
-        margin-bottom: 5px;
-    }
-    
-    
-    #rodape_redessociais {
-        margin-top: 20px;
-    }
-    
-    .rodape-link {
-        color: #fff;
-        margin: 0 10px;
-        font-size: 18px;
-        text-decoration: none;
-        transition: color 0.3s ease;
-    }
-    
-    #instagram:hover {
-        color: var(--cores-50);
-    }
-    
-    #facebook:hover {
-        color: var(--cores-40);
-    }
-    
-    #rodape_copyright {
-        margin-top: 25px;
-        font-size: 12px;
-        color: #aaa;
-    }
+a {
+    color: #1FB3AC;
+    text-decoration: none;
+    font-weight: bold;
+}
 
+a:hover {
+    color: var(--color-5);
+    text-decoration: underline;
+}

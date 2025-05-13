@@ -3,58 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-..." crossorigin="anonymous">
+
+    <!-- Seus estilos -->
     <link rel="stylesheet" href="/Styles/estilosgerais.css">
     <link rel="stylesheet" href="/Styles/style.css">
     <link rel="stylesheet" href="/Styles/slide.css">
     <link rel="stylesheet" href="/Styles/QuemSomos.css">
+    
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
     <script src="slide.js" defer></script>
+
     <title>CPA - Ação Comunitária</title>
 
-    <link rel="website icon" type="png" 
-    href="./assets/logo cpa.png">
+    <link rel="website icon" type="png" href="./assets/logo cpa.png">
 </head>
 <body>
     
-    <!--Menu de Navegação-->
-    <header class="cabecalho">
-        <nav class="cabecalho__menu">
-            <a href="Home.html">
-            <img class="cabecalho__logo" src="./assets/logo_paroquia_cpa.png" alt="logo"></a>
-            <a class="cabecalho__menu__link" href="Home.html">Home</a>
-            <a class="cabecalho__menu__link" href="Cursos.html">Cursos</a>
-            <a class="cabecalho__menu__link" href="QuemSomos.html">Quem Somos</a>
-            <a class="cabecalho__menu__link" href="Parceiros.html">Parceiros</a>
-            <a class="cabecalho__menu__link" href="Contato.html">Contatos</a>
-            <a class="cabecalho__menu__link" href="Doação.html">Doação</a>
-        </nav>
-    </header>
-    <!--Carrossel-->
-    <section class="slider">
-        <div class="slider-content">
-            
-            <input type="radio" name="btn-radio" id="radio1">
-            <input type="radio" name="btn-radio" id="radio2">
-            <input type="radio" name="btn-radio" id="radio3">
-            
-            <div class="slide-box primeiro">
-                <img class="img-desktop" src="assets/fundo1.jpg" alt="slide 1">
-                <img class="img-mobile" src="assets/fundo1_mob.jpg" alt="slide 1">
-            </div>
-            
-            <div class="slide-box">
-                <img class="img-desktop" src="assets/fundo2.jpg" alt="slide 1">
-                <img class="img-mobile" src="assets/fundo2_mob.jpg" alt="slide 1">
-            </div>
-            
-            <div class="slide-box">
-                <img class="img-desktop" src="assets/fundo3.jpg" alt="slide 1">
-                <img class="img-mobile" src="assets/fundo3_mob.jpg" alt="slide 1">
+  <header id="cabeçalho" style="background-color: white; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+    <div class="container" style="max-width: 1200px; margin: 0 auto;">
+        <div class="flex" style="display: flex; align-items: center; justify-content: space-between; padding: 10px 0;">
+            <img class="cabecalho__logo" src="./assets/logo_paroquia_cpa.png" alt="logo" style="height: 60px;">
+
+            <nav>
+                <ul style="display: flex; gap: 60px; list-style: none; margin: 0; padding: 0;">
+                    <li><a href="#" style="font-weight: bold; color: black;">HOME</a></li>
+                    <li><a href="#" style="font-weight: bold; color: black;">QUEM SOMOS</a></li>
+                    <li><a href="#" style="font-weight: bold; color: black;">CURSOS</a></li>
+                    <li><a href="#" style="font-weight: bold; color: black;">PARCERIAS</a></li>
+                    <li><a href="#" style="font-weight: bold; color: black;">DOAÇÃO</a></li>
+                </ul>
+            </nav>
+
+            <div class="botão-contato" style="margin-left: 30px;">
+                <a href="#"><button style="background-color: #1A347F; color: white; border: none; padding: 10px 20px; border-radius: 5px;">CONTATO</button></a>
             </div>
         </div>
+    </div>
+</header>
+
+    <script src="menu.js"></script>
+
+    <!-- Carrossel -->
+    <section class="slider">
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./assets/fundo1_mob.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./assets/fundo2.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./assets/fundo3.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
     </section>
-    
-    <!-- Infomações do Site -->
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-..." crossorigin="anonymous"></script>
+
+    <!-- Informações do Site -->
     <main class="apresentacao">
         <p class="apresentacao__conteudo">
             A Ação Comunitária Paroquial do Jardim Colonial Pe. Emir Rigon é uma organização social sem fins lucrativos localizada
@@ -67,54 +89,49 @@
         </p>
     </main>
     
-    <div class="div_foto1">
-        <img class="CPA_fotos" src="./assets/fotopessoas.png" alt="foto do cpa">
+    <!-- Banner CPA -->
+<div id="div_foto1"></div>
+
+<main class="Atividades_Desenvolvidas">
+    <div class="div_foto2">
+        <img class="CPA_fotos" src="./assets/cpa.logo2 (1).png" alt="foto do cpa">
     </div>
-    
-    <main class="Atividades_Desenvolvidas">
-        <div class="div_foto2">
-            <img class="CPA_fotos" src="./assets/cpa.logo2 (1).png" alt="foto do cpa">
-        </div>
-        <p class="Atividades_Desenvolvidas">
-            <b>Serviço de Convivência e Fortalecimento de Vínculos (SCFV) Centro para Crianças e Adolescentes (CCA):</b> Atendendo a 840 crianças e adolescentes de 06 a 15 anos, com atividades que visam ao alcance da autonomia, e ao protagonismo social, através de experiências lúdicas, culturais e esportivas, como forma de expressão, que favorecem o desenvolvimento de sociabilidades e prevenção da situação de risco social. <br>
-            <br>
-            <b>Serviço de Convivência e Fortalecimento de Vínculos Centro de Juventude (CJ):</b> Atendendo a 120 adolescentes de 15 anos a 17 anos e 11 meses, com foco no fortalecimento da convivência familiar e comunitária, contribuindo para o retorno e permanência dos jovens na escola, por meio de desenvolvimento de atividades que estimulem a convivência social, a participação cidadã e a formação geral para o mundo do trabalho. <br>
-            <br>
-            <b>Centro de Desenvolvimento Social e Produtivo (CEDESP):</b> Atendendo a 280 jovens e adultos, a partir de 15 anos, visando o investimento na formação profissional e programas de aprendizagem, assegurando o conhecimento do mundo do trabalho e capacitando em diferentes habilidades, na perspectiva de ampliar o repertório cultural e a participação na vida pública, preparando-o para conquistar e manter a empregabilidade e a autonomia.
-        </p>
+    <p class="Atividades_Desenvolvidas">
+        <b>Serviço de Convivência e Fortalecimento de Vínculos (SCFV) Centro para Crianças e Adolescentes (CCA):</b> Atendendo a 840 crianças e adolescentes de 06 a 15 anos, com atividades que visam ao alcance da autonomia, e ao protagonismo social, através de experiências lúdicas, culturais e esportivas, como forma de expressão, que favorecem o desenvolvimento de sociabilidades e prevenção da situação de risco social. <br><br>
+        <b>Serviço de Convivência e Fortalecimento de Vínculos Centro de Juventude (CJ):</b> Atendendo a 120 adolescentes de 15 anos a 17 anos e 11 meses, com foco no fortalecimento da convivência familiar e comunitária, contribuindo para o retorno e permanência dos jovens na escola, por meio de desenvolvimento de atividades que estimulem a convivência social, a participação cidadã e a formação geral para o mundo do trabalho. <br><br>
+        <b>Centro de Desenvolvimento Social e Produtivo (CEDESP):</b> Atendendo a 280 jovens e adultos, a partir de 15 anos, visando o investimento na formação profissional e programas de aprendizagem, assegurando o conhecimento do mundo do trabalho e capacitando em diferentes habilidades, na perspectiva de ampliar o repertório cultural e a participação na vida pública, preparando-o para conquistar e manter a empregabilidade e a autonomia.
+    </p>
+</main>
+
     </main>
      
-    <!--Rodapé-->
+    <!-- Rodapé -->
     <section>
         <footer id="rodape">
             <ul class="rodape-lista">
-            <li><b>(11) 2736-3237</b></li>
-        </ul>
+                <li><b>(11) 2736-3237</b></li>
+            </ul>
             <ul class="rodape-lista">
-            <li><b>Seg à Sex -- 7h às 22h</b></li>
-        </ul>
+                <li><b>Seg à Sex -- 7h às 22h</b></li>
+            </ul>
             <ul class="rodape-lista">
-            <li><b>Estrada da Colônia, 110 - Jd. São Gonçalo - CEP: 08370-190 </b></li>
-        </ul>
+                <li><b>Estrada da Colônia, 110 - Jd. São Gonçalo - CEP: 08370-190 </b></li>
+            </ul>
             <ul class="rodape-lista">
-            <li><b>Órgão/Entidade ONG CPA CNPJ: 52.801.883/0008-09</b></li> 
-        </ul>
+                <li><b>Órgão/Entidade ONG CPA CNPJ: 52.801.883/0008-09</b></li> 
+            </ul>
             <div id="rodape_redessociais">
                 <a href="https://www.instagram.com/cpapebellodossantos?igsh=MWpsOG82YzV5dTl6dA==" class="rodape-link" id="instagram" target="_blank" rel="noopener noreferrer"> 
                     <i class="fa-brands fa-instagram"></i>
-                    
                 </a>
-            
                 <a href="https://www.facebook.com/share/15QhAH7akf/" class="rodape-link" id="facebook" target="_blank" rel="noopener noreferrer">
                     <i class="fa-brands fa-facebook-f"></i>
                 </a>
             </div>
-           <div id="rodape_copyright">
-               &#169
-               2023 all rights reserved
-           </div>
+            <div id="rodape_copyright">
+                &#169; 2023 all rights reserved
+            </div>
         </footer>
     </section>
-    </body>
-    </html>
-    
+</body>
+</html>

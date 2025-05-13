@@ -1,4 +1,16 @@
 
+:root {
+    --color-1: #F4E100;
+    --color-2: #E6DFD8;
+    --color-3: #DE5D25;
+    --color-4: #1FB3AC;
+    --color-5: #1B3F91;
+    --color-6: #8E3F90;
+    --color-7: #DE261A;
+    --color-8: #171717;
+    --color-9: #f5f5f5;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -18,10 +30,8 @@ main {
     max-width: 1000px;
     height: auto;
     padding: 24px;
-    border: 2px solid #1FB3AC; 
     border-radius: 10px;
     font-size: 20px;
-    resize: none;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
     display: block;
     margin: 30px auto;
@@ -40,19 +50,29 @@ main {
     margin: 30px auto;
     background-color: #f4f4f4; 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    color: #444;
+    color: black;
 }
 
 .Atividades_Desenvolvidas b {
     font-weight: bold;
     font-size: 20px;
-    color: #DE261A; 
+    color: var(--color-5); 
 }
 
+#div_foto1 {
+    width: 100vw;
+    height: 400px;
+    background-image: url('../assets/fotopessoas.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 20px 0;
+    border-radius: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-.CPA_fotos {
+.div_foto2 {
     max-width: 100%;
-    height: auto;
     margin: 20px 0;
     display: block;
     border-radius: 8px;
@@ -60,11 +80,8 @@ main {
     transition: transform 0.3s ease-in-out;
 }
 
-.CPA_fotos:hover {
-    transform: scale(1.05); /* Efeito suave ao passar o mouse */
-}
 
-/* Responsividade: Alinhando as imagens e textos para telas menores */
+
 @media (max-width: 768px) {
     .Atividades_Desenvolvidas {
         padding: 2rem;
@@ -78,18 +95,7 @@ main {
 
     .CPA_fotos {
         width: 80%;
-        margin: 10px auto; /* Alinhamento central para as imagens */
+        margin: 10px auto;
     }
 }
 
-
-a {
-    color: #1FB3AC;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-a:hover {
-    color: #DE261A;
-    text-decoration: underline;
-}
