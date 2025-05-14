@@ -80,19 +80,16 @@ nav ul li a {
 header.rolagem a {
     color: var(--color-5); 
 }
-
-
 /* ===========================
    Banner
 =========================== */
 .banner {
     height: 100vh;
-    background-image: url(/img/bodysite.jpeg);
+    background-image: url(../assets/Prancheta_1[1].png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 /* ===========================
    Botão de Contato
 =========================== */
